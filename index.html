@@ -53,6 +53,7 @@
             const playNowLink = "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}`;
             function openLink(link) {
                 window.open(link);
+                copyToClipboard();
             }
             const tgLink = "https://t.me/Epoker168";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
@@ -70,13 +71,22 @@
                 }
             }
             function copyToClipboard() {
-                console.log(params);
                 var area = document.createElement("textarea");
-  document.body.appendChild(area);
-  area.value = text;
-  area.select();
-  document.execCommand("copy");
-  document.body.removeChild(area);
+                area.value = params;
+                console.log(area.value)
+                document.body.appendChild(area);
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        try {
+                            area.select();
+                            document.execCommand("Copy");
+                            document.body.removeChild(area);
+                            resolve(true);
+                        } catch (err) {
+                            resolve(false);
+                        }
+                    }, 100);
+                });
             }
             generateQRImg();
         </script>

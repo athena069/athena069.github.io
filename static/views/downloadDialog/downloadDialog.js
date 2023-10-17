@@ -77,7 +77,6 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
   methods: {
     openLink() {
       openLink(apk);
-      copyParams()
     },
   },
   template: `

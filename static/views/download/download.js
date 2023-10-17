@@ -21,7 +21,6 @@ const downloadComponent = Vue.component("download-component", {
     },
     openLink() {
       openLink(apk);
-      copyToClipboard(params);
     },
     showDialog() {
       this.$parent.$parent.$parent.showDownloadDialog();
