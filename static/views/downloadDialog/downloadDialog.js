@@ -134,7 +134,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
                 ></v-img>
               </v-btn>
             </v-card-title>
-
+{{installParams}}
             <v-card-text>
               <v-btn
                 width="100%"
