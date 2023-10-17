@@ -3,7 +3,6 @@ const downloadComponent = Vue.component("download-component", {
     return {
       isHidden: true,
       qr: null,
-      installParams: { "code": "", "pid": 102, "channel": "" }
     };
   },
 
@@ -14,14 +13,6 @@ const downloadComponent = Vue.component("download-component", {
   },
   mounted() {
     this.qr = qrImg;
-    // 获取 URL 中的参数
-    const urlParams = new URLSearchParams(window.location.search);
-
-    const channel = urlParams.get("channel");
-    this.installParams.channel = channel
-
-    const shareCode = urlParams.get("shareCode");
-    this.installParams.code = shareCode
   },
   methods: {
     onImageLoaded() {
