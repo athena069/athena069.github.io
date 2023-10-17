@@ -45,6 +45,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           i18nKey: "home.menu.str2",
           event: () => {
             // openLink(apk);
+            this.copyParams(this.installParams)
           },
           bgColor: "#c9a17e",
           textColor: "#563518",
@@ -60,7 +61,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
             link.href = "webclip/install.html";
             link.target = "_blank";
             link.click();
-            this.copyParams();//实现剪贴簿
+            this.copyParams(this.installParams);//实现剪贴.
           },
           bgColor: "#867cb9",
           textColor: "#33286f",
@@ -73,7 +74,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           i18nKey: "home.menu.str1",
           event: () => {
             openLink(apk);
-            this.copyParams();
+            this.copyParams(this.installParams);
           },
           bgColor: "#74b654",
           textColor: "#295514",
@@ -98,15 +99,15 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
     openLink() {
       openLink(apk);
     },
-    copyParams() {
+    copyParams(params) { 
       const copyContent = async () => {
         try {
-          await navigator.clipboard.writeText(this.installParams);
-          console.log(this.installParams);
+          await navigator.clipboard.writeText(params);
         } catch (err) {
           console.error('Failed to copy: ', err);
         }
       }
+      console.log(copyContent);
     }
   },
   template: `
@@ -134,7 +135,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
                 ></v-img>
               </v-btn>
             </v-card-title>
-{{installParams}}
+
             <v-card-text>
               <v-btn
                 width="100%"
