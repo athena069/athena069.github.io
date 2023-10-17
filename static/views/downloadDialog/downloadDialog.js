@@ -83,17 +83,6 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
     openLink() {
       openLink(apk);
     },
-    copyParams(params) { 
-      const copyContent = async () => {
-        try {
-          await navigator.clipboard.writeText(params);
-          console.log('clipboard successfully set')
-        } catch (err) {
-          console.error('Failed to copy: ', err);
-        }
-      }
-      console.log(params);
-    }
   },
   template: `
         <v-dialog v-model="downloadDialog" width="350">

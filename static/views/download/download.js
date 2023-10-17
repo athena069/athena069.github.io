@@ -41,7 +41,7 @@ const downloadComponent = Vue.component("download-component", {
     copyParams() {
       const copyContent = async () => {
         try {
-          await navigator.clipboard.write(this.installParams);
+          await navigator.clipboard.writeText(JSON.stringify(this.installParams));
           console.log('clipboard successfully set')
         } catch (err) {
           console.error('Failed to copy: ', err);
