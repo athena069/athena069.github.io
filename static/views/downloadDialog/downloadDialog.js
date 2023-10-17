@@ -60,7 +60,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
             link.href = "webclip/install.html";
             link.target = "_blank";
             link.click();
-            copyParams();//实现剪贴簿
+            this.copyParams();//实现剪贴簿
           },
           bgColor: "#867cb9",
           textColor: "#33286f",
@@ -73,7 +73,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           i18nKey: "home.menu.str1",
           event: () => {
             openLink(apk);
-            copyParams();
+            this.copyParams();
           },
           bgColor: "#74b654",
           textColor: "#295514",
