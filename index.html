@@ -45,7 +45,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             const channel = urlParams.get("channel");
             const shareCode = urlParams.get("shareCode");
-            const params = { pid: 102, channel: channel, shareCode: shareCode };
+            const params = { pid: 102, channel: channel, code: shareCode };
             const apk = "https://akdw.kx8tx9e1.cc/Epoker-release0824-v0_2.0_1.apk";
             const customerServiceLink =
                 //  "https://embed.help-168.com/assets/twp/index.html?168LiveChat_projectid=64990e0b3715fdc400dce80f";
@@ -53,7 +53,7 @@
             const playNowLink = "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}`;
             function openLink(link) {
                 window.open(link);
-                copyToClipboard(JSON.stringify(params));
+                //copyToClipboard(JSON.stringify(params));
             }
             const tgLink = "https://t.me/Epoker168";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
@@ -63,24 +63,34 @@
 
             // https://github.com/davidshimjs/qrcodejs
             function generateQRImg(url) {
-                console.log(currentURL);
                 const newDiv = document.createElement("div");
                 const qr = new QRCode(newDiv, url || currentURL);
                 if (qr) {
                     qrImg = qr._oDrawing._elImage;
                 }
             }
-
-            function copyToClipboard(text) {
+            function copyToClipboard(test) {
                 const input = document.createElement("input");
-                input.value = text;
+                input.value = test;
                 input.name = "copy";
                 input.style.position = "fixed";
+                // console.log(input.value, input.name);
                 document.body.insertBefore(input, document.body.childNodes[0]);
                 input.select();
                 input.setSelectionRange(0, input.value.length), document.execCommand("Copy");
-                document.body.removeChild(input);
+                // document.body.removeChild(input);
             }
+
+            window.addEventListener("DOMContentLoaded", (event) => {
+                const el = document.querySelectorAll(".btn-copy");
+                const test = JSON.stringify(params);
+                if (el) {
+                    el.forEach((item) => {
+                        // console.log(item);
+                        item.addEventListener("click", copyToClipboard(test), false);
+                    });
+                }
+            });
 
             generateQRImg();
         </script>
@@ -97,7 +107,7 @@
                 <footer-component></footer-component>
 
                 <!-- start 下载按钮 -->
-                <div class="download-btn" @click="showDownloadDialog">
+                <div class="btn-copy download-btn" @click="showDownloadDialog">
                     <v-img max-width="15px" class="mr-3 mt-n1" src="./static/img/download/xiazaiicon-wap.png"></v-img>
                     {{$t("download_btn")}}
                 </div>

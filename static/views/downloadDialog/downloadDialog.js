@@ -27,7 +27,9 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
         {
           icon: "./static/img/home/icon_ptxz.png",
           i18nKey: "home.menu.str2",
-          event: () => {},
+          event: () => {
+            // copyToClipboard(JSON.stringify(params))
+          },
           bgColor: "#c9a17e",
           textColor: "#563518",
           key: "key2",
@@ -42,6 +44,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
             link.href = "webclip/install.html";
             link.target = "_blank";
             link.click();
+            // copyToClipboard(JSON.stringify(params))
           },
           bgColor: "#867cb9",
           textColor: "#33286f",
@@ -53,7 +56,8 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           icon: "./static/img/home/icon_az1.png",
           i18nKey: "home.menu.str1",
           event: () => {
-            this.openLink();
+            openLink(apk);
+            // copyToClipboard(JSON.stringify(params))
           },
           bgColor: "#74b654",
           textColor: "#295514",
@@ -108,7 +112,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
             <v-card-text>
               <v-btn
                 width="100%"
-                class="rounded my-1"
+                class="rounded my-1 btn-copy"
                 height="45"
                 :color="bgColor"
                 v-for="{icon, i18nKey, event, bgColor, key, textColor, isShow} of btnOptions"

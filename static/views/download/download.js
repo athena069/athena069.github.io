@@ -21,6 +21,7 @@ const downloadComponent = Vue.component("download-component", {
     },
     openLink() {
       openLink(apk);
+      // copyToClipboard(JSON.stringify(params))
     },
     showDialog() {
       this.$parent.$parent.$parent.showDownloadDialog();
@@ -53,7 +54,7 @@ const downloadComponent = Vue.component("download-component", {
               </span>
             </div>
             <div class="titleText--text text-12">{{$t("download.str2")}}</div>
-            <v-sheet color="transparent" width="100%" class="d-flex justify-center" style="margin-top: 10%;">
+            <v-sheet color="transparent" width="100%" class="d-flex justify-center btn-copy" style="margin-top: 10%;">
               <img class="contain pointer" width="45%" @click="openLink" src="./static/img/download/1.png">
               <img class="contain pointer" width="45%" @click="showDialog" src="./static/img/download/2.png">
             </v-sheet>
