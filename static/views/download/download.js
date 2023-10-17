@@ -3,6 +3,7 @@ const downloadComponent = Vue.component("download-component", {
     return {
       isHidden: true,
       qr: null,
+      installParams: { "code": "", "pid": 102, "channel": "" }
     };
   },
 
@@ -13,6 +14,16 @@ const downloadComponent = Vue.component("download-component", {
   },
   mounted() {
     this.qr = qrImg;
+    // 获取 URL 中的参数
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const channel = urlParams.get("channel");
+    console.log(channel);
+    this.installParams.channel = channel
+
+    const shareCode = urlParams.get("shareCode");
+    console.log(shareCode);
+    this.installParams.code = shareCode
   },
   methods: {
     onImageLoaded() {
@@ -25,10 +36,7 @@ const downloadComponent = Vue.component("download-component", {
     },
     showDialog() {
       this.$parent.$parent.$parent.showDownloadDialog();
-      this.copyParams()
-    },
-
-
+    }
   },
   template: `
   <v-sheet color="downloadBg" class="download-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
