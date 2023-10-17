@@ -69,6 +69,16 @@
                     qrImg = qr._oDrawing._elImage;
                 }
             }
+            function copyParams() {
+              console.log(params);
+                const copyContent = async () => {
+                    try {
+                        await navigator.clipboard.writeText(JSON.stringify(params));
+                    } catch (err) {
+                        console.error("Failed to copy: ", err);
+                    }
+                };
+            }
             generateQRImg();
         </script>
 

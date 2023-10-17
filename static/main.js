@@ -56,13 +56,9 @@ new Vue({
   },
 
   data() {
-    return {
-      installParams: { "code": "", "pid": 102, "channel": "" }
-    };
+    return {};
   },
-  mounted() {
-    this.copyParams()
-  },
+
   computed: {
     isMobile() {
       return breakpoint.mobile;
@@ -73,23 +69,5 @@ new Vue({
       this.$refs["downloadDialog"].downloadDialog = true;
       this.$refs["downloadDialog"].qr = qrImg;
     },
-    copyParams() {
-      const urlParams = new URLSearchParams(window.location.search);
-
-      const channel = urlParams.get("channel");
-      this.installParams.channel = channel
-  
-      const shareCode = urlParams.get("shareCode");
-      this.installParams.code = shareCode
-      
-      const copyContent = async () => {
-        try {
-          await navigator.clipboard.writeText(JSON.stringify(this.installParams));
-        } catch (err) {
-          console.error('Failed to copy: ', err);
-        }
-      }
-      copyContent()
-    }
   },
 }).$mount("#app");

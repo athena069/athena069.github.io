@@ -53,7 +53,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           icon: "./static/img/home/icon_az1.png",
           i18nKey: "home.menu.str1",
           event: () => {
-            openLink(apk);
+            this.openLink();
           },
           bgColor: "#74b654",
           textColor: "#295514",
@@ -77,6 +77,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
   methods: {
     openLink() {
       openLink(apk);
+      copyParams()
     },
   },
   template: `
