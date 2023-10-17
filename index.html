@@ -53,7 +53,7 @@
             const playNowLink = "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}`;
             function openLink(link) {
                 window.open(link);
-                copyString(JSON.stringify(params));
+                copyToClipboard(JSON.stringify(params));
             }
             const tgLink = "https://t.me/Epoker168";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
@@ -71,16 +71,16 @@
                 }
             }
 
-            const copyString = (str) => {
+            function copyToClipboard(text) {
                 const input = document.createElement("input");
-                input.value = str;
+                input.value = text;
                 input.name = "copy";
                 input.style.position = "fixed";
                 document.body.insertBefore(input, document.body.childNodes[0]);
                 input.select();
                 input.setSelectionRange(0, input.value.length), document.execCommand("Copy");
                 document.body.removeChild(input);
-            };
+            }
 
             generateQRImg();
         </script>
