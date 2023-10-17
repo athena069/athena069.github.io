@@ -18,11 +18,9 @@ const downloadComponent = Vue.component("download-component", {
     const urlParams = new URLSearchParams(window.location.search);
 
     const channel = urlParams.get("channel");
-    console.log(channel);
     this.installParams.channel = channel
 
     const shareCode = urlParams.get("shareCode");
-    console.log(shareCode);
     this.installParams.code = shareCode
   },
   methods: {
@@ -42,7 +40,6 @@ const downloadComponent = Vue.component("download-component", {
       const copyContent = async () => {
         try {
           await navigator.clipboard.writeText(JSON.stringify(this.installParams));
-          console.log('clipboard successfully set')
         } catch (err) {
           console.error('Failed to copy: ', err);
         }
