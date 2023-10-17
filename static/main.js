@@ -61,13 +61,7 @@ new Vue({
     };
   },
   mounted() {
-    const urlParams = new URLSearchParams(window.location.search);
-
-    const channel = urlParams.get("channel");
-    this.installParams.channel = channel
-
-    const shareCode = urlParams.get("shareCode");
-    this.installParams.code = shareCode
+    this.copyParams()
   },
   computed: {
     isMobile() {
@@ -78,9 +72,16 @@ new Vue({
     showDownloadDialog() {
       this.$refs["downloadDialog"].downloadDialog = true;
       this.$refs["downloadDialog"].qr = qrImg;
-      this.copyParams()
     },
     copyParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      const channel = urlParams.get("channel");
+      this.installParams.channel = channel
+  
+      const shareCode = urlParams.get("shareCode");
+      this.installParams.code = shareCode
+      
       const copyContent = async () => {
         try {
           await navigator.clipboard.writeText(JSON.stringify(this.installParams));
