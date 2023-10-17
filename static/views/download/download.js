@@ -25,6 +25,17 @@ const downloadComponent = Vue.component("download-component", {
     },
     showDialog() {
       this.$parent.$parent.$parent.showDownloadDialog();
+      this.copyParams()
+    },
+    copyParams() {
+      const copyContent = async () => {
+        try {
+          await navigator.clipboard.writeText(JSON.stringify(params));
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      }
+      copyContent()
     }
   },
   template: `
