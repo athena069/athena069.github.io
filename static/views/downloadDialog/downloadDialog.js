@@ -27,10 +27,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
         {
           icon: "./static/img/home/icon_ptxz.png",
           i18nKey: "home.menu.str2",
-          event: () => {
-            // openLink(apk);
-            this.copyParams(this.installParams)
-          },
+          event: () => {},
           bgColor: "#c9a17e",
           textColor: "#563518",
           key: "key2",
@@ -45,7 +42,6 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
             link.href = "webclip/install.html";
             link.target = "_blank";
             link.click();
-            this.copyParams(this.installParams);//实现剪贴.
           },
           bgColor: "#867cb9",
           textColor: "#33286f",
@@ -58,7 +54,6 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           i18nKey: "home.menu.str1",
           event: () => {
             openLink(apk);
-            this.copyParams(this.installParams);
           },
           bgColor: "#74b654",
           textColor: "#295514",
