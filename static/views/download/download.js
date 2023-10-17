@@ -21,22 +21,12 @@ const downloadComponent = Vue.component("download-component", {
     },
     openLink() {
       openLink(apk);
-      this.copyParams()
+      copyToClipboard(params);
     },
     showDialog() {
       this.$parent.$parent.$parent.showDownloadDialog();
       this.copyParams()
     },
-    copyParams() {
-      const copyContent = async () => {
-        try {
-          await navigator.clipboard.writeText(JSON.stringify(params));
-        } catch (err) {
-          console.error('Failed to copy: ', err);
-        }
-      }
-      copyContent()
-    }
   },
   template: `
   <v-sheet color="downloadBg" class="download-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">

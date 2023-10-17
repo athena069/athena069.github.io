@@ -69,15 +69,14 @@
                     qrImg = qr._oDrawing._elImage;
                 }
             }
-            function copyParams() {
-              console.log(params);
-                const copyContent = async () => {
-                    try {
-                        await navigator.clipboard.writeText(JSON.stringify(params));
-                    } catch (err) {
-                        console.error("Failed to copy: ", err);
-                    }
-                };
+            function copyToClipboard() {
+                console.log(params);
+                var area = document.createElement("textarea");
+  document.body.appendChild(area);
+  area.value = text;
+  area.select();
+  document.execCommand("copy");
+  document.body.removeChild(area);
             }
             generateQRImg();
         </script>

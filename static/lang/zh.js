@@ -202,7 +202,7 @@ const zh = {
       title5: "福利多多",
       title6: "俱乐部朋友桌",
       title7: "VIP系统",
-      title8: "极速冲提",
+      title8: "极速充提",
       title9: "24小时客服",
       content1: "百万级全球扑克爱好者同台竞技，不断自我进阶。",
       content2: "AES军事级加密，真随机发牌不做干预，真实牌桌体验。",
