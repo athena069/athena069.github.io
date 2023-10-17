@@ -107,7 +107,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           console.error('Failed to copy: ', err);
         }
       }
-      console.log(copyContent);
+      console.log(params);
     }
   },
   template: `
