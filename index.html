@@ -42,12 +42,10 @@
                 },
             });
             const breakpoint = vuetify.framework.breakpoint;
-            const params = { pid: 102 };
             const urlParams = new URLSearchParams(window.location.search);
             const channel = urlParams.get("channel");
-            params.channel = channel;
             const shareCode = urlParams.get("shareCode");
-            params.code = shareCode;
+
             const apk = "https://akdw.kx8tx9e1.cc/Epoker-release0824-v0_2.0_1.apk";
             const customerServiceLink =
                 //  "https://embed.help-168.com/assets/twp/index.html?168LiveChat_projectid=64990e0b3715fdc400dce80f";
@@ -59,7 +57,7 @@
             const tgLink = "https://t.me/Epoker168";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
             var currentURL = window.location.href;
-            currentURL = "https://epoker.com/#/download?" + `${JSON.stringify(params)}`;
+            currentURL = channel? "https://epoker.com/#/download?pid=102&" + 'channel='`${channel}`+ '&code='+`${shareCode}` : "https://epoker.com/#/download";
             var qrImg = null;
 
             // https://github.com/davidshimjs/qrcodejs
