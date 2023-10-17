@@ -22,22 +22,6 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
       }
       return "unknown";
     },
-    installParams() {
-      let params = { "code": "", "pid": 102, "channel": "" }
-      // 获取 URL 中的参数
-      const urlParams = new URLSearchParams(window.location.search);
-
-      // 获取单个参数
-      const channel = urlParams.get("channel");
-      console.log(channel);
-      params.channel = channel
-      // 获取多个参数
-      const shareCode = urlParams.get("shareCode");
-      console.log(shareCode);
-      params.code = shareCode
-      return params
-    },
-
     btnOptions() {
       return [
         {
@@ -103,6 +87,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
       const copyContent = async () => {
         try {
           await navigator.clipboard.writeText(params);
+          console.log('clipboard successfully set')
         } catch (err) {
           console.error('Failed to copy: ', err);
         }

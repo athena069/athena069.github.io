@@ -3,13 +3,10 @@ const downloadComponent = Vue.component("download-component", {
     return {
       isHidden: true,
       qr: null,
+      installParams: { "code": "", "pid": 102, "channel": "" }
     };
   },
-  // created() {
-  //   setTimeout(() => {
-  //     this.isHidden = false;
-  //   }, overlayTime);
-  // },
+
   computed: {
     isMobile() {
       return breakpoint.mobile;
@@ -17,6 +14,16 @@ const downloadComponent = Vue.component("download-component", {
   },
   mounted() {
     this.qr = qrImg;
+    // 获取 URL 中的参数
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const channel = urlParams.get("channel");
+    console.log(channel);
+    this.installParams.channel = channel
+
+    const shareCode = urlParams.get("shareCode");
+    console.log(shareCode);
+    this.installParams.code = shareCode
   },
   methods: {
     onImageLoaded() {
@@ -25,10 +32,25 @@ const downloadComponent = Vue.component("download-component", {
     },
     openLink() {
       openLink(apk);
+      this.copyParams()
     },
     showDialog() {
       this.$parent.$parent.$parent.showDownloadDialog();
+      this.copyParams()
+    },
+    copyParams() {
+      console.log(this.installParams);
+      const copyContent = async () => {
+        try {
+          await navigator.clipboard.writeText(this.installParams);
+          console.log('clipboard successfully set')
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      }
+      copyContent()
     }
+
   },
   template: `
   <v-sheet color="downloadBg" class="download-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
