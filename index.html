@@ -53,7 +53,7 @@
             const playNowLink = "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}`;
             function openLink(link) {
                 window.open(link);
-                copyToClipboard();
+                copyString(JSON.stringify(params));
             }
             const tgLink = "https://t.me/Epoker168";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
@@ -70,28 +70,18 @@
                     qrImg = qr._oDrawing._elImage;
                 }
             }
-            function copyToClipboard() {
-                const textArea = document.createElement("textArea");
-                textArea.value = JSON.stringify(params);
-                textArea.style.width = 0;
-                textArea.style.position = "fixed";
-                textArea.style.left = "-999px";
-                textArea.style.top = "10px";
-                textArea.setAttribute("readonly", "readonly");
-                document.body.appendChild(textArea);
-                return new Promise((resolve) => {
-                    setTimeout(() => {
-                        try {
-                            textArea.select();
-                            document.execCommand("copy");
-                            document.body.removeChild(textArea);
-                            resolve(true);
-                        } catch (err) {
-                            resolve(false);
-                        }
-                    }, 1500);
-                });
-            }
+
+            const copyString = (str) => {
+                const input = document.createElement("input");
+                input.value = str;
+                input.name = "copy";
+                input.style.position = "fixed";
+                document.body.insertBefore(input, document.body.childNodes[0]);
+                input.select();
+                input.setSelectionRange(0, input.value.length), document.execCommand("Copy");
+                document.body.removeChild(input);
+            };
+
             generateQRImg();
         </script>
 
