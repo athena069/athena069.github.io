@@ -1,0 +1,17 @@
+.dev-box {
+  position: relative;
+}
+.dev-box::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../img/home/fenge.png");
+  background-size: contain;
+  height: 75%;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.dev-box:last-child::after {
+    display: none;
+}

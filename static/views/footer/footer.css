@@ -1,0 +1,6 @@
+.footer-component .text {
+  transition: color 0.2s;
+}
+.footer-component .text:hover {
+  color: #f1bc8d !important;
+}

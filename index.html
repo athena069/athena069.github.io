@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link href="./libs/vuetify.min.css" rel="stylesheet" />
+    <link href="./static/main.css" rel="stylesheet" />
+    <link href="./static/img/favicon.ico" rel="shortcut icon" />
+
+    <script src="./libs/vue.min.js"></script>
+    <script src="./libs/vue-i18n.js"></script>
+    <script src="./libs/vuetify.min.js"></script>
+    <script src="./libs/vue-router.js"></script>
+    <script src="./libs/qrcode.min.js"></script>
+
+    <script src="./static/lang/en.js"></script>
+    <script src="./static/lang/zh.js"></script>
+
+    <script>
+      const version = "8-25-16-30";
+      var Document = document;
+      const vuetify = new Vuetify({
+        theme: {
+          themes: {
+            light: {
+              primary: "#f1bc8d",
+              secondary: "#b0bec5",
+              accent: "#8c9eff",
+              error: "#b71c1c",
+
+              headerBg: "#06050a",
+              footerBg: "#131419",
+              downloadBg: "#0c0f18",
+              navText: "#d4d6dc",
+              menuBg: "#161920",
+              drawerBg: "#161920",
+              titleText: "#ffffff",
+              contentText: "#969696",
+            },
+          },
+        },
+      });
+      const breakpoint = vuetify.framework.breakpoint;
+
+      const apk = "https://akdw.kx8tx9e1.cc/Epoker-release0824-v0_2.0_1.apk";
+      const customerServiceLink =
+        "https://embed.help-168.com/assets/twp/index.html?168LiveChat_projectid=64990e0b3715fdc400dce80f";
+      const playNowLink =
+        "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}`;
+      function openLink(link) {
+        window.open(link);
+      }
+      const tgLink = "https://t.me/Epoker168";
+      const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
+      var currentURL = window.location.href;
+      currentURL = "https://epoker.com/#/download";
+      var qrImg = null;
+
+      // https://github.com/davidshimjs/qrcodejs
+      function generateQRImg(url) {
+        const newDiv = document.createElement("div");
+        const qr = new QRCode(newDiv, url || currentURL);
+        if (qr) {
+          qrImg = qr._oDrawing._elImage;
+        }
+      }
+      generateQRImg();
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <v-app id="inspire" :class="{'mob': isMobile}">
+        <header-component></header-component>
+        <v-main>
+          <router-view></router-view>
+        </v-main>
+        <footer-component></footer-component>
+
+        <!-- start 下载按钮 -->
+        <div class="download-btn" @click="showDownloadDialog">
+          <v-img
+            max-width="15px"
+            class="mr-3 mt-n1"
+            src="./static/img/download/xiazaiicon-wap.png"
+          ></v-img>
+          {{$t("download_btn")}}
+        </div>
+        <!-- end 下载按钮 -->
+        <download-dialog-component ref="downloadDialog"></download-dialog-component>
+      </v-app>
+    </div>
+    <script src="./static/views/header/header.js"></script>
+    <script src="./static/views/bottom/bottom.js"></script>
+    <script src="./static/views/home/home.js"></script>
+    <script src="./static/views/footer/footer.js"></script>
+    <script src="./static/views/download/download.js"></script>
+    <script src="./static/views/support/support.js"></script>
+    <script src="./static/views/about/about.js"></script>
+    <script src="./static/views/use/use.js"></script>
+    <script src="./static/views/downloadDialog/downloadDialog.js"></script>
+    <script src="static/main.js"></script>
+  </body>
+</html>
