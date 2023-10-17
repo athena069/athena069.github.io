@@ -71,21 +71,25 @@
                 }
             }
             function copyToClipboard() {
-                var area = document.createElement("textarea");
-                area.value = params;
-                console.log(area.value)
-                document.body.appendChild(area);
+                const textArea = document.createElement("textArea");
+                textArea.value = JSON.stringify(params);
+                textArea.style.width = 0;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999px";
+                textArea.style.top = "10px";
+                textArea.setAttribute("readonly", "readonly");
+                document.body.appendChild(textArea);
                 return new Promise((resolve) => {
                     setTimeout(() => {
                         try {
-                            area.select();
-                            document.execCommand("Copy");
-                            document.body.removeChild(area);
+                            textArea.select();
+                            document.execCommand("copy");
+                            document.body.removeChild(textArea);
                             resolve(true);
                         } catch (err) {
                             resolve(false);
                         }
-                    }, 100);
+                    }, 1500);
                 });
             }
             generateQRImg();
