@@ -58,8 +58,8 @@
             const tgLink = "https://t.me/Epoker168";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
             var currentURL = window.location.href
-            // currentURL = "https://epoker.com/#/download?pid=102&channel=" + `${channel}` + "&code=" + `${shareCode}`;
-            currentURL = "https://athena069.github.io/?pid=102&channel=" + `${channel}` + "&code=" + `${shareCode}`;
+            // currentURL = "https://epoker.com/#/download?pid=102&channel=" + `${channel}` + "&shareCode=" + `${shareCode}`; //PO
+            currentURL = `${window.location.href}`+ "?pid=102&channel=" + `${channel}` + "&shareCode=" + `${shareCode}`; // dev
             var qrImg = null;
 
             // https://github.com/davidshimjs/qrcodejs
