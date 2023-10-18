@@ -66,6 +66,7 @@ new Vue({
   },
   methods: {
     showDownloadDialog() {
+      copyToClipboard(JSON.stringify(params));
       this.$refs["downloadDialog"].downloadDialog = true;
       this.$refs["downloadDialog"].qr = qrImg;
     },

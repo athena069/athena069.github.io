@@ -53,7 +53,7 @@
             const playNowLink = "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}`;
             function openLink(link) {
                 window.open(link);
-                //copyToClipboard(JSON.stringify(params));
+                copyToClipboard(JSON.stringify(params));
             }
             const tgLink = "https://t.me/Epoker168";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
@@ -74,23 +74,13 @@
                 input.value = test;
                 input.name = "copy";
                 input.style.position = "fixed";
-                // console.log(input.value, input.name);
+                console.log(input.value, input.name);
                 document.body.insertBefore(input, document.body.childNodes[0]);
                 input.select();
-                input.setSelectionRange(0, input.value.length), document.execCommand("Copy");
-                // document.body.removeChild(input);
+                input.setSelectionRange(0, input.value.length);
+                document.execCommand("copy");
+                document.body.removeChild(input);
             }
-
-            window.addEventListener("DOMContentLoaded", (event) => {
-                const el = document.querySelectorAll(".btn-copy");
-                const test = JSON.stringify(params);
-                if (el) {
-                    el.forEach((item) => {
-                        // console.log(item);
-                        item.addEventListener("click", copyToClipboard(test), false);
-                    });
-                }
-            });
 
             generateQRImg();
         </script>
@@ -107,7 +97,7 @@
                 <footer-component></footer-component>
 
                 <!-- start 下载按钮 -->
-                <div class="btn-copy download-btn" @click="showDownloadDialog">
+                <div class="download-btn" @click="showDownloadDialog">
                     <v-img max-width="15px" class="mr-3 mt-n1" src="./static/img/download/xiazaiicon-wap.png"></v-img>
                     {{$t("download_btn")}}
                 </div>
