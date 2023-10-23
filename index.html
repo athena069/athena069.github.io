@@ -50,14 +50,14 @@
             const customerServiceLink =
                 //  "https://embed.help-168.com/assets/twp/index.html?168LiveChat_projectid=64990e0b3715fdc400dce80f";
                 "https://epoker.com/chatlink/chatlink.html";
-            const playNowLink = "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}`;
+            const playNowLink = "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}` + "&" + urlParams;
             function openLink(link) {
                 window.open(link);
                 copyToClipboard(JSON.stringify(params));
             }
             const tgLink = "https://t.me/Epoker168";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
-            var currentURL = window.location.href
+            var currentURL = window.location.href;
             // currentURL = "https://epoker.com/#/download?pid=102&channel=" + `${channel}` + "&shareCode=" + `${shareCode}`; //PO
             // currentURL = "https://athena069.github.io/?pid=102&channel=" + `${channel}` + "&shareCode=" + `${shareCode}`; // dev
             var qrImg = null;
@@ -118,3 +118,4 @@
         <script src="static/main.js"></script>
     </body>
 </html>
+ngrok http file:///Users/user/athena069.github.io
