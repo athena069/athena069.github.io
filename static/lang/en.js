@@ -52,7 +52,7 @@ const en = {
         "str1-bottom-2":
           "577.com reserves all implied or other rights not expressly granted to users in this agreement, and reserves all rights, property rights and benefits to the software. You agree that you are responsible for any damages, expenses or expenses caused by or related to your unauthorized use. Once you discover that someone has unauthorized use, you should immediately notify 577.com and provide reasonable assistance when 577.com conducts an investigation based on the information you provide.",
         "str1-5":
-          "Any other trademarks, service marks, logos, trade names and / or domain names (hereinafter referred to as “trademarks”) used by 577.com in the site and / or software from time to time belong to 577.com, and these entities reserve all rights to the aforementioned trademarks. In addition, all content on the site, including but not limited to 577’s software, images, pictures, graphics, photos, animations, videos, music, audio and text (hereinafter referred to as “site content”), enjoys copyright and / or other knowledge Property rights, rights. You acknowledge that you cannot obtain any rights to the site content, trademarks or any part of it by using the services and sites. You may not use site content and / or trademarks under any circumstances without the prior written consent of 577.com. In addition, you agree not to engage in any action that damages or may damage 577’s rights to software, trademarks, site content (including intellectual property rights), and does not engage in any damage to the image or reputation of 577.com and its employees, directors, executives, consultants Any behavior.",
+          "Any other trademarks, service marks, logos, trade names and / or domain names (hereinafter referred to as “trademarks”) used by 577.com in the site and / or software from time to time belong to 577.com, and these entities reserve all rights to the aforementioned trademarks. In addition, all content on the site, including but not limited to 577.com’s software, images, pictures, graphics, photos, animations, videos, music, audio and text (hereinafter referred to as “site content”), enjoys copyright and / or other knowledge Property rights, rights. You acknowledge that you cannot obtain any rights to the site content, trademarks or any part of it by using the services and sites. You may not use site content and / or trademarks under any circumstances without the prior written consent of 577.com. In addition, you agree not to engage in any action that damages or may damage 577.com’s rights to software, trademarks, site content (including intellectual property rights), and does not engage in any damage to the image or reputation of 577.com and its employees, directors, executives, consultants Any behavior.",
         "str1-6":
           "You warrant that the names and pictures (such as user name and avatar) you use in the site and service-related purposes do not infringe the intellectual property rights, privacy rights or other rights of any third party. You hereby grant 577.com a global, irrevocable, transferable, royalty-free, and sub-licensable license that allows the latter to use the names and pictures you use in the site and service-related purposes in compliance with the privacy policy .",
         "str2-1":
@@ -74,7 +74,7 @@ const en = {
         "str4-4":
           "You are responsible for the cash you have won using the service and the taxes you must pay for the awards.",
         "str4-5":
-          "The telecommunications network and Internet access services you need to access and use the service are completely beyond the control of 577.com. 577.com is not responsible for dropped connections, slow network speeds, traffic restrictions or other defects;",
+          "The telecommunications network and Internet access services you need to access and use the service are completely beyond the control of 577.com.   577.com is not responsible for dropped connections, slow network speeds, traffic restrictions or other defects;",
         "str4-6":
           "You have reached the age of 18 and currently have no voluntary gambling bans on any online or mobile betting sites. If you reach a voluntary gambling ban agreement with any gaming provider, you will immediately notify us.",
         "str5-1":
@@ -283,8 +283,5 @@ const en = {
     content:
       "Scan the QR Code, you will be redirected to the application download page.",
   },
-  577: "577.com",
-  tg: "Telegram",
-  whats_app: "WhatsApp",
-  mail: "XXX@MAIL.COM",
+
 };
