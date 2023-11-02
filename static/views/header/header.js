@@ -21,7 +21,7 @@ const headerComponent = Vue.component("header-component", {
       (item) => item.key === this.$i18n.locale
     );
     this.title = Document.querySelector("title");
-    this.title.textContent = this.$t("577.com");
+    this.title.textContent = this.$t("577");
   },
   computed: {
     curLang() {
