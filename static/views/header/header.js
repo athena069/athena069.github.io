@@ -110,7 +110,7 @@ const headerComponent = Vue.component("header-component", {
           ></v-img>
         </v-btn>
 
-        <v-img @click="goHome" src="./static/img/header/logo.png" max-width="80px"></v-img>
+        <v-img @click="goHome" src="./static/img/header/logo.png" max-width="60px"></v-img>
         <v-img
           src="./static/img/header/GLI.png"
           max-width="60px"
@@ -170,7 +170,7 @@ const headerComponent = Vue.component("header-component", {
         <v-img
           style="margin-right: 100px"
           src="./static/img/header/logo.png"
-          max-width="100px"
+          max-width="80px"
           @click="goHome"
           class="pointer"
         ></v-img>
