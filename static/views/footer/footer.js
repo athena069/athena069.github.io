@@ -23,7 +23,7 @@ const footerComponent = Vue.component("footer-component", {
     <!-- h5 -->
     <template v-if="isMobile">
       <v-img
-        max-width="100px"
+        max-width="80px"
         contain
         src="static/img/header/logo.png"
       ></v-img>
@@ -46,7 +46,7 @@ const footerComponent = Vue.component("footer-component", {
       >
         <div class="mr-auto">
           <v-img
-            max-width="100px"
+            max-width="80px"
             contain
             src="static/img/header/logo.png"
           ></v-img>
