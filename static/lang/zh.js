@@ -285,4 +285,8 @@ const zh = {
     title: "直接从手机下载",
     content: "扫QR码,跳转至手机版应用下载页面.",
   },
+  577: "577.com",
+  tg: "Telegram",
+  whats_app: "WhatsApp",
+  mail: "XXX@MAIL.COM",
 };

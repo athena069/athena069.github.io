@@ -283,5 +283,8 @@ const en = {
     content:
       "Scan the QR Code, you will be redirected to the application download page.",
   },
-
+  577: "577.com",
+  tg: "Telegram",
+  whats_app: "WhatsApp",
+  mail: "XXX@MAIL.COM",
 };

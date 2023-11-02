@@ -44,7 +44,7 @@ const headerComponent = Vue.component("header-component", {
       const key = this.langOptions[val].key;
       localStorage.setItem("language", key);
       this.$i18n.locale = key; //这个代码负责实时切换语言
-      this.title.textContent = this.$t("577.com");
+      this.title.textContent = this.$t("577");
     },
     goHome() {
       if (this.$router.currentRoute.path != "/") this.$router.push("/");
