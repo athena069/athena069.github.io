@@ -22,13 +22,14 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
       }
       return "unknown";
     },
+
     btnOptions() {
       return [
         {
           icon: "./static/img/home/icon_ptxz.png",
           i18nKey: "home.menu.str2",
           event: () => {
-            // copyToClipboard(JSON.stringify(params))
+            openLink(ipa_url);
           },
           bgColor: "#c9a17e",
           textColor: "#563518",

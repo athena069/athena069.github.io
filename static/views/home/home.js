@@ -14,7 +14,9 @@ var homeComponent = Vue.component("home-component", {
         {
           i18nKey: "home.menu.str2",
           icon: "./static/img/home/icon_ptxz.png",
-          event: () => {},
+          event: () => {
+            openLink(ipa_url);
+          },
         },
         {
           i18nKey: "home.menu.str3",
@@ -148,7 +150,7 @@ var homeComponent = Vue.component("home-component", {
         width="100%"
         class="relative d-flex justify-center"
       >
-        <img class="contain" width="100%" src="./static/img/home/h5/banner_01.png" style="margin-top: -15%" />
+        <img class="contain" width="100%" src="./static/img/home/h5/banner_01.png" style="margin-top: -10%" />
         <v-sheet
           color="transparent"
           class="mx-auto absolute px-2"
@@ -181,7 +183,7 @@ var homeComponent = Vue.component("home-component", {
             cols="12"
             v-for="({titleKey, contentKey, icon}, index) of options1"
             :key="index"
-            style="height: 100px"
+            style="height: fit-content"
           >
             <v-sheet
               color="#303136"

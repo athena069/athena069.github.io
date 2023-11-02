@@ -4,6 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
         <meta name="theme-color" content="#000000" />
+        <!-- 落地页清理缓存-->
+        <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
         <link href="./libs/vuetify.min.css" rel="stylesheet" />
         <link href="./static/main.css" rel="stylesheet" />
         <link href="./static/img/favicon.ico" rel="shortcut icon" />
@@ -46,20 +50,21 @@
             const channel = urlParams.get("channel");
             const shareCode = urlParams.get("shareCode");
             const params = { pid: 102, channel: channel, code: shareCode };
-            const apk = "https://akdw.kx8tx9e1.cc/Epoker-release0824-v0_2.0_1.apk";
-            const customerServiceLink =
-                //  "https://embed.help-168.com/assets/twp/index.html?168LiveChat_projectid=64990e0b3715fdc400dce80f";
-                "https://epoker.com/chatlink/chatlink.html";
+
+            const apk = "https://akdw.kx8tx9e1.cc/Epoker-d1020-v231.apk";
+            const ipa_url = "https://i8kl22ag.3t897b2m6g.com/i8kl22ag";
+            const customerServiceLink = "https://embed.help-168.com/assets/twp/index.html?168LiveChat_projectid=653f5fc9c519d800137c93b5";
             const playNowLink = "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}` + "&" + urlParams;
             function openLink(link) {
                 window.open(link);
                 copyToClipboard(JSON.stringify(params));
             }
-            const tgLink = "https://t.me/Epoker168";
+            const tgLink = "https://t.me/game577";
             const whatsappLink = "https://api.whatsapp.com/send?phone=85262778514";
             var currentURL = window.location.href;
-            // currentURL = "https://epoker.com/#/download?pid=102&channel=" + `${channel}` + "&shareCode=" + `${shareCode}`; //PO
-            // currentURL = "https://athena069.github.io/?pid=102&channel=" + `${channel}` + "&shareCode=" + `${shareCode}`; // dev
+              currentURL = "https://577.com/#/download?pid=103&channel=" + `${channel}` + "&shareCode=" + `${shareCode}`; //dev
+
+  
             var qrImg = null;
 
             // https://github.com/davidshimjs/qrcodejs
@@ -106,16 +111,15 @@
                 <download-dialog-component ref="downloadDialog"></download-dialog-component>
             </v-app>
         </div>
-        <script src="./static/views/header/header.js"></script>
-        <script src="./static/views/bottom/bottom.js"></script>
-        <script src="./static/views/home/home.js"></script>
-        <script src="./static/views/footer/footer.js"></script>
-        <script src="./static/views/download/download.js"></script>
-        <script src="./static/views/support/support.js"></script>
-        <script src="./static/views/about/about.js"></script>
-        <script src="./static/views/use/use.js"></script>
-        <script src="./static/views/downloadDialog/downloadDialog.js"></script>
-        <script src="static/main.js"></script>
+        <script src="./static/views/header/header.js?v=136"></script>
+        <script src="./static/views/bottom/bottom.js?v=136"></script>
+        <script src="./static/views/home/home.js?v=136"></script>
+        <script src="./static/views/footer/footer.js?v=136"></script>
+        <script src="./static/views/download/download.js?v=136"></script>
+        <script src="./static/views/support/support.js?v=136"></script>
+        <script src="./static/views/about/about.js?v=136"></script>
+        <script src="./static/views/use/use.js?v=136"></script>
+        <script src="./static/views/downloadDialog/downloadDialog.js?v=136"></script>
+        <script src="static/main.js?v=136"></script>
     </body>
 </html>
-ngrok http file:///Users/user/athena069.github.io
