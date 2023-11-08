@@ -1,3 +1,9 @@
+// 阻止cookie开启情况下无法开启落地页
+
+if (typeof localStorage !== 'undefined') {
+  localStorage.setItem('language', 'zh');
+}
+
 var i18n = new VueI18n({
   locale: localStorage.getItem("language") || "zh",
   messages: {
