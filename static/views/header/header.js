@@ -43,6 +43,7 @@ const headerComponent = Vue.component("header-component", {
     changeLang(val) {
       const key = this.langOptions[val].key;
       localStorage.setItem("language", key);
+      console.log(localStorage.getItem("language"));
       this.$i18n.locale = key; //这个代码负责实时切换语言
       this.title.textContent = this.$t("577");
     },
