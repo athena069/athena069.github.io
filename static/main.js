@@ -1,11 +1,15 @@
 // 阻止cookie开启情况下无法开启落地页
-if (window.navigator.cookieEnabled) {
-  // localStorage.setItem('language', 'zh');
-  console.log( window.navigator.cookieEnabled)
+if (window.navigator.cookieEnabled){
+  localStorage.setItem('language', 'zh');
 }
-
+// 去使用indexedDB
+if (!window.indexedDB) {
+  window.alert(
+    "Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.",
+  );
+}
 var i18n = new VueI18n({
-  locale: "zh" || localStorage.getItem("language"),
+  locale: `${localStorage?.getItem("language")  || "zh"}`,
   messages: {
     en,
     zh,
