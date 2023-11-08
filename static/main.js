@@ -1,11 +1,11 @@
 // 阻止cookie开启情况下无法开启落地页
-
-if (typeof localStorage !== 'undefined') {
-  localStorage.setItem('language', 'zh');
+if (window.navigator.cookieEnabled) {
+  // localStorage.setItem('language', 'zh');
+  console.log( window.navigator.cookieEnabled)
 }
 
 var i18n = new VueI18n({
-  locale: localStorage.getItem("language") || "zh",
+  locale: "zh" || localStorage.getItem("language"),
   messages: {
     en,
     zh,
