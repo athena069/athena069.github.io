@@ -62,7 +62,7 @@ new Vue({
     // 阻止cookie开启情况下无法开启落地页
     if (window.navigator.cookieEnabled) {
       this.locale = localStorage.getItem('locale')
-    } console.log(this.locale);
+    } 
   },
   computed: {
     isMobile() {
