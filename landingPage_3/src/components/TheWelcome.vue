@@ -8,6 +8,7 @@ import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
+  <!-- 左边 -->
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
