@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>歡迎訂購完美化身</title>
+        <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="/images/per.ico" />
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            .kv {
+                width: 100%;
+                margin: 10% auto;
+                img {
+                    max-width: 90px;
+                }
+            }
+
+            body {
+                .container{
+                    margin-top: 5rem;
+                }
+                font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+            }
+            .action-title {
+                color: #616161;
+                letter-spacing: 0.09rem;
+            }
+            .form-button {
+                @apply w-full text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2  disabled:cursor-not-allowed;
+                background: #65347f;
+              
+            }
+
+            /* .form-button:hover {
+                background: linear-gradient(135deg, #7a2db3 0%, #5a257f 100%);
+            } */
+            .form-cell-wrapper {
+                @apply relative;
+            }
+
+            .form-textbox-input {
+                background-color: #fff;
+                @apply w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ;
+            }
+
+            .form-textbox-label {
+                @apply absolute left-4 top-3 text-gray-500 transition-all duration-200 pointer-events-none;
+            }
+
+            .form-textbox-input:focus + .form-textbox-label,
+            .form-textbox-input:not(:placeholder-shown) + .form-textbox-label {
+                @apply -top-2 left-3 text-xs bg-white px-1 text-blue-600;
+            }
+
+            .input-arrow-icon {
+                @apply absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none;
+            }
+            .bg-gradient-to-gy {
+                background-color: #e8e8e8;
+            }
+            .footer {
+                position: fixed;
+                background-color: #f5f5f7;
+                bottom: 0;
+                width: 100%;
+                font-size: 12px;
+                line-height: 1.5;
+                font-weight: 400;
+                color: #0000008f;
+            }
+ 
+        </style>
+    </head>
+    <body class="bg-gradient-to-gy to-indigo-100 min-h-screen">
+        <div class="container mx-auto px-4 py-8 max-w-4xl">
+            <!-- Logo 區域 -->
+            <div class="kv">
+                <div class="flex justify-center items-center">
+                    <img src="/images/logo.png" max-width="220px" alt="完美化身 Logo" />
+                </div>
+            </div>
+
+            <!-- 地址輸入表格 -->
+            <div class="action-title p-4">
+                <h2 class="mb-4">
+                    歡迎使用完美化身Beta   請輸入您的地址
+                </h2>
+
+                <form id="addressForm" class="space-y-6">
+                    <!-- 地址輸入 -->
+                    <div class="form-cell-wrapper">
+                        <input type="text" id="address" name="address" placeholder=" " required class="form-textbox-input" />
+                        <span class="form-textbox-label">郵寄地址</span>
+                        <svg class="input-arrow-icon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+
+                    <!-- 提交按鈕 -->
+                    <div>
+                        <button type="submit" class="form-button" data-autom="address-submit-button">
+                            <span>
+                                <span>繼續</span>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="py-6 footer">
+            <div class="text-center">
+                <p>客服電話：0800-000-989</p>
+            </div>
+        </div>
+
+        <script>
+            // 輸入框焦點效果
+            document.querySelectorAll(".input-field").forEach((input) => {
+                input.addEventListener("focus", function () {
+                    this.parentElement.classList.add("transform", "scale-105");
+                });
+
+                input.addEventListener("blur", function () {
+                    this.parentElement.classList.remove("transform", "scale-105");
+                });
+            });
+        </script>
+    </body>
+</html>

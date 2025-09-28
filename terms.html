@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>網站使用條款｜完美化身</title>
+        <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="/images/per.ico" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+                color: #1d1d1f;
+                background-color:  #e8e8e8;
+                h1 {
+                    font-weight: 600;
+                }
+            }
+            .logo {
+                display: flex;
+                justify-content: center;
+                img {
+                    margin-top: 1rem;
+                    max-width: 86px;
+                }
+            }
+            .legal-container {
+                @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl;
+            }
+            .legal-header {
+                @apply pt-5 pb-6 md:pt-8 md:pb-8 border-b border-gray-200;
+            }
+            .legal-title {
+                @apply text-3xl;
+            }
+            .legal-subtitle {
+                @apply mt-4  text-gray-500;
+            }
+            .legal-grid {
+                @apply grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 lg:gap-12 py-8 md:py-10;
+            }
+            .legal-aside {
+                @apply md:col-span-3 lg:col-span-3;
+            }
+            .legal-aside-inner {
+                @apply md:sticky md:top-24;
+            }
+            .toc-title {
+                @apply text-xs tracking-wide text-gray-500 uppercase mb-3;
+            }
+            .toc-list a {
+                @apply block py-2 text-sm text-gray-600 hover:text-black transition-colors;
+            }
+            .toc-list a.active {
+                @apply font-medium text-black;
+            }
+            .legal-content {
+                @apply md:col-span-9 lg:col-span-9;
+            }
+            .section {
+                @apply mb-12;
+            }
+            .section h2 {
+                @apply text-2xl md:text-3xl mb-4;
+            }
+            .section h3 {
+                @apply text-lg md:text-xl mt-6 mb-2;
+            }
+            .section p {
+                @apply text-[15px] leading-7 text-gray-500;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+            .section ul {
+                @apply list-disc pl-6 space-y-2 text-[15px] leading-7 text-gray-500;
+            }
+            .footer-note {
+                @apply mt-12 pt-6 border-t border-gray-200 text-xs text-gray-500;
+            }
+            .back-top {
+                @apply fixed bottom-6 right-6 bg-black text-white rounded-full px-4 py-2 text-sm shadow-md hover:bg-gray-800 transition-colors;
+                z-index: 9;
+            }
+            .footer {
+                position: relative;
+                background-color: #f5f5f7;
+                bottom: 0;
+                width: 100%;
+                font-size: 12px;
+                line-height: 1.5;
+                font-weight: 400;
+                color: #0000008f;
+                z-index: 1;
+                text-align: center;
+            }
+            p > strong {
+                color: #000000cc;
+            }
+            .form-button {
+                @apply text-white font-medium py-3 px-15 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 disabled:opacity-50;
+                background: #65347f;
+            }
+            .form-button:hover {
+                background: #5a257f;
+            }
+            /* Checkbox 選取後顏色 */
+            #agreeTerms {
+                accent-color: #65347f;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="legal-header legal-container">
+            <div class="logo mb-8 center">
+                <img src="/images/logo.png" alt="" />
+            </div>
+            <h1 class="legal-title mb-6">使用者條款</h1>
+            <div class="legal-subtitle">
+                感謝您選擇使用 《完美化身》 （以下簡稱「本裝置」）。本使用者條款（以下 簡稱「本條款」）為使用者（以下簡稱「您」）與 完美化身 實驗室
+                （以下簡稱「本公司」）之間具完全法律效力的契約文件，旨在規範您於操作本裝置、生成、呼喚與互動虛擬化身（以下簡稱「化身」）過程中之所有權利、義務、風險與限制。請您務必詳讀本條款所有章節。一旦您勾選「我已詳閱並同意」並按下確認鍵，即表示您已完全理解並接受本條款內容，並願意受其拘束；若您
+                不同意其中任一條款，請立即停止使用並關閉本裝置。
+            </div>
+        </header>
+
+        <main class="legal-container legal-grid">
+            <aside class="legal-aside">
+                <div class="legal-aside-inner">
+                    <div class="toc">
+                        <div class="toc-title">目錄</div>
+                        <nav class="toc-list">
+                            <a href="#ch1">第一章 總則與契約成立</a>
+                            <a href="#ch2">第二章 服務範圍與功能說明</a>
+                            <a href="#ch3">第三章 使用者義務與行為規範</a>
+                            <a href="#ch4">第四章 隱私與數據處理</a>
+                            <a href="#ch5">第五章 心理風險與倫理規範</a>
+                            <a href="#ch6">第六章 系統安全與異常處理</a>
+                            <a href="#ch7">第七章 跨境使用與合規</a>
+                            <a href="#ch8">第八章 保固、維修與更新</a>
+                            <a href="#ch9">第九章 責任免除</a>
+                            <a href="#ch10">第十章 條款終止與授權撤銷</a>
+                            <a href="#ch11">第十一章 法律適用與管轄</a>
+                            <a href="#appendix">附錄：術語解釋與技術說明</a>
+                            <a href="#final">最終聲明</a>
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="legal-content">
+                <section id="ch1" class="section">
+                    <h2>第一章　總則與契約成立</h2>
+                    <p><strong>1.1 契約成立</strong><br />當您於啟動畫面勾選同意框並按下確認鍵後，即視為與本公司締結具有法律效力之契約。</p>
+                    <p><strong>1.2 條款效力</strong><br />本條款自您按下確認鍵之時即刻生效，並適用於您後續所有操作行為，包括但不限於：樣本提供、DNA 掃描、化身生成、投影呼喚、回收、綁定、互動及後續授權管理。</p>
+                    <p><strong>1.3 更新與修正</strong><br />本公司得不定期修正、更新、補充或替換本條款，更新內容將透過裝置通知或官方網站公告。您於更新後繼續使用，即視為接受最新條款；若不同意，應立即停止使用並可申請撤銷授權。</p>
+                    <p><strong>1.4 使用限制</strong><br />本裝置僅供年滿 18 歲之成年人使用；未滿 18 歲者必須由法定監護人詳閱並同意本條款方可使用。監護人應負責監督未成年人之使用行為及其後果。</p>
+                </section>
+
+                <section id="ch2" class="section">
+                    <h2>第二章　服務範圍與功能說明</h2>
+                    <p><strong>2.1 核心功能</strong><br />本裝置提供下列功能：</p>
+                    <ul>
+                        <li>單一人類頭髮樣本之 DNA 解析與特徵向量化</li>
+                        <li>透過 AI 深度學習演算法進行行為建模與聲音頻譜重建</li>
+                        <li>投影生成立體化身，支援即時互動與情緒表達</li>
+                        <li>選配腦波同步模組以提升互動精準度</li>
+                    </ul>
+                    <p><strong>2.2 服務用途</strong><br />Persona Box 之主要目的為個人娛樂、創作靈感、研究驗證與概念展示，並非設計為醫療器材、司法鑑定工具或人格替代方案，亦不得作為身份驗證、法律行為或證據用途。</p>
+                    <p><strong>2.3 服務限制</strong></p>
+                    <ul>
+                        <li>化身行為僅為演算法預測結果，可能與原始個體實際性格不符</li>
+                        <li>系統無法還原完整記憶、思想或意識</li>
+                        <li>強光、磁場或高噪音環境可能導致投影品質下降</li>
+                        <li>裝置每次僅能解析一份樣本，請勿混放</li>
+                    </ul>
+                    <p><strong>2.4 Beta 功能警告</strong><br />若您參與 Beta 計畫，您理解並接受此版本可能存在錯誤、延遲、行為偏差、記憶體溢出或意外中斷之風險，並同意協助回報問題。</p>
+                </section>
+
+                <section id="ch3" class="section">
+                    <h2>第三章　使用者義務與行為規範</h2>
+                    <p><strong>3.1 樣本合法性</strong><br />您應確保所提供之頭髮樣本合法取得，不得未經允許擅自採集他人樣本；若因使用未授權樣本引發隱私或法律爭議，您須承擔全部責任。</p>
+                    <p><strong>3.2 操作遵循</strong><br />您必須依說明書規範操作，避免於掃描或投影過程中開蓋或移動裝置，以防資料損毀或系統錯誤。</p>
+                    <p><strong>3.3 三分鐘規則</strong><br />您須於生成完成後三分鐘倒數期間內決定是否取消化身，逾時系統將自動綁定該樣本，並建立不可逆的授權憑證。</p>
+                    <p><strong>3.4 禁止行為</strong><br />嚴禁以下行為：</p>
+                    <ul>
+                        <li>嘗試破解、反編譯或修改裝置韌體</li>
+                        <li>建立多重化身進行操縱、騷擾、散播虛假訊息</li>
+                        <li>將化身用於心理操控、勒索、恐嚇、跟蹤或侵犯隱私</li>
+                        <li>將本裝置拆解、改裝、轉售或用於商業大規模生成</li>
+                    </ul>
+                </section>
+
+                <section id="ch4" class="section">
+                    <h2>第四章　隱私與數據處理</h2>
+                    <p><strong>4.1 資料收集範圍</strong><br />本裝置僅收集與功能運作相關之最低限度資料，包括：樣本特徵向量、授權憑證、時間戳記、狀態碼、操作日誌。</p>
+                    <p><strong>4.2 本地運算與銷毀</strong><br />所有 DNA 解析與行為建模於本地即時完成，投影結束後系統立即銷毀暫存資料，無法復原。</p>
+                    <p><strong>4.3 雲端同步</strong><br />僅上傳授權憑證及啟用狀態，用於跨裝置同步及安全稽核，不包含原始基因資料。</p>
+                    <p><strong>4.4 加密機制</strong><br />所有資料傳輸採用端對端加密與多層金鑰驗證，防止第三方攔截或竄改。</p>
+                    <p><strong>4.5 隱私申訴</strong><br />您可隨時聯絡本公司資料保護官以請求查詢、刪除或限制使用紀錄，本公司將於 30 個工作日內回覆。</p>
+                </section>
+
+                <section id="ch5" class="section">
+                    <h2>第五章　心理風險與倫理規範</h2>
+                    <p><strong>5.1 心理影響告知</strong><br />與化身長時間互動可能引發情感依附、認知混淆、現實感削弱、焦慮或情緒失控。本公司建議每次互動不超過 15 分鐘，並在情緒不穩或高壓狀態下避免使用。</p>
+                    <p><strong>5.2 倫理行為準則</strong></p>
+                    <ul>
+                        <li>不得以化身作為挑釁或情緒勒索工具</li>
+                        <li>不得安排化身與原始個體同場對抗，避免不可預期的心理後果</li>
+                        <li>教育、研究或公共展示須事先取得所有參與者同意</li>
+                    </ul>
+                    <p><strong>5.3 尊重數位人格</strong><br />雖然化身不具完整意識，但仍屬創建之人格模擬，請避免故意虐待、銷毀或在短時間內反覆生成與消除。</p>
+                </section>
+
+                <section id="ch6" class="section">
+                    <h2>第六章　系統安全與異常處理</h2>
+                    <p><strong>6.1 異常偵測</strong><br />裝置會持續監測溫度、電源、樣本完整性及外部干擾，一旦發現異常將立即停止程序以保護系統。</p>
+                    <p><strong>6.2 錯誤訊息</strong><br />常見狀態包括：樣本未偵測、多重 DNA、解析超時、系統過熱、授權失效，裝置會以指示燈與螢幕提示顯示錯誤原因。</p>
+                    <p><strong>6.3 自動鎖機</strong><br />若偵測到惡意入侵、韌體修改或連續生成超過安全閾值，系統將鎖定裝置並清除暫存資料，需授權中心解鎖後方能再次使用。</p>
+                    <p><strong>6.4 日誌紀錄</strong><br />所有操作將生成時間戳記日誌，用於維護與安全稽核，日誌僅儲存於本地或加密雲端，不會公開。</p>
+                </section>
+
+                <section id="ch7" class="section">
+                    <h2>第七章　跨境使用與合規</h2>
+                    <p><strong>7.1 法律遵循</strong><br />使用者有責任確認當地法律允許 DNA 採集與虛擬人格生成，若違法使用導致糾紛，本公司不承擔責任。</p>
+                    <p><strong>7.2 功能限制</strong><br />部分國家或地區基於資料主權可能限制雲端同步、降低投影時長或解析度。</p>
+                    <p><strong>7.3 網路延遲</strong><br />跨境使用時可能出現授權驗證延遲、互動不同步或中斷，屬正常情況。</p>
+                </section>
+
+                <section id="ch8" class="section">
+                    <h2>第八章　保固、維修與更新</h2>
+                    <p><strong>8.1 保固範圍</strong><br />自購買日起十二個月內，因製造瑕疵導致功能失效可獲免費維修或更換。</p>
+                    <p><strong>8.2 保固排除</strong><br />跌落、液體浸入、雷擊、非授權拆解、改裝、韌體破解、電源錯誤接駁所導致的故障不在保固範圍。</p>
+                    <p><strong>8.3 維修程序</strong><br />裝置送修後將恢復出廠設定，所有暫存資料將被清除。</p>
+                    <p><strong>8.4 韌體更新</strong><br />本公司可透過 OTA 推送更新修復漏洞、提升安全性或調整功能，更新後可能改變部分操作流程。</p>
+                </section>
+
+                <section id="ch9" class="section">
+                    <h2>第九章　責任免除</h2>
+                    <p><strong>9.1 化身偏差</strong><br />本公司不保證化身之行為、語言、情緒完全符合原始個體，亦不對因此造成的心理落差或誤解負責。</p>
+                    <p><strong>9.2 心理影響</strong><br />本公司不對因長期互動導致的焦慮、失眠、幻覺、人際衝突負責，使用者應自行承擔後果。</p>
+                    <p><strong>9.3 第三方糾紛</strong><br />若使用化身導致第三方名譽損害、隱私侵犯、財務損失或法律糾紛，責任由使用者自行承擔。</p>
+                </section>
+
+                <section id="ch10" class="section">
+                    <h2>第十章　條款終止與授權撤銷</h2>
+                    <p>10.1 本公司得在您違反條款或危及系統安全時立即終止授權，並刪除所有綁定資料。</p>
+                    <p>10.2 使用者可隨時提出授權撤銷申請，裝置將清除本地憑證並停用功能。</p>
+                </section>
+
+                <section id="ch11" class="section">
+                    <h2>第十一章　法律適用與管轄</h2>
+                    <p>11.1 本條款受裝置購買地法律管轄並據其解釋。</p>
+                    <p>11.2 爭議發生時，雙方同意以本公司總部所在地法院為第一審管轄法院。</p>
+                    <p>11.3 條款部分若被裁定無效，其餘部分仍持續有效。</p>
+                </section>
+
+                <section id="appendix" class="section mx-2">
+                    <h2>附錄：術語解釋與技術說明</h2>
+                    <ul>
+                        <li><strong>化身</strong>：指由本裝置透過樣本生成之虛擬人格投影</li>
+                        <li><strong>綁定</strong>：三分鐘倒數結束後建立之不可逆授權狀態</li>
+                        <li><strong>授權憑證</strong>：用以驗證使用者身分與呼喚權限之數位金鑰</li>
+                        <li><strong>暫存資料</strong>：指解析結果、行為模型、運算快取等短期資料</li>
+                        <li><strong>腦波同步</strong>：選配功能，讀取使用者腦電波以提升互動擬真度</li>
+                    </ul>
+                </section>
+
+                <section id="final" class="section">
+                    <h2>最終聲明</h2>
+                    <p>《完美化身》所生成的所有投影僅為演算法模擬結果，不代表原始個體之意志、記憶或行為。本公司不對任何互動結果、心理影響、第三方糾紛或決策後果負責。使用本裝置即表示您已理解並同意承擔所有風險，並遵守本條款與相關法律。</p>
+                </section>
+            </section>
+        </main>
+
+        <section class="legal-container py-4 md:py-8">
+            <div class="bg-white border border-gray-200 rounded-xl p-4 md:p-6">
+                <label class="flex items-start gap-3">
+                    <input id="agreeTerms" type="checkbox" class="mt-1 h-5 w-5 rounded border-gray-300" />
+                    <span class="text-[15px] leading-7 text-gray-800"> 我已閱讀並同意接受本服務條款之所有內容 </span>
+                </label>
+                <div class="mt-4 flex justify-end">
+                    <button id="confirmTerms" type="button" class="form-button" disabled>
+                        <span>
+                            <span>確認</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <a href="#top" class="back-top" aria-label="回到頁首">回到頂端</a>
+        <div class="bg-gradient-to-gy py-8 footer">
+            <div class="legal-container flex items-center justify-between">
+                <p>《完美化身》 使用者條款</p>
+                <p>台灣</p>
+            </div>
+        </div>
+        <script>
+            // 目錄高亮：根據滾動位置更新 active
+            const headings = Array.from(document.querySelectorAll(".section"));
+            const links = Array.from(document.querySelectorAll(".toc-list a"));
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.getAttribute("id");
+                            links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === `#${id}`));
+                        }
+                    });
+                },
+                { rootMargin: "0px 0px -70% 0px", threshold: 0.1 }
+            );
+            headings.forEach((sec) => observer.observe(sec));
+
+            // 將位於 CJK 文字之間的半形標點轉為全形，避免樣式不一致
+            function normalizeCjkPunctuationInNode(rootElement) {
+                const walker = document.createTreeWalker(rootElement, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        // 跳過只含空白的文字節點
+                        return NodeFilter.FILTER_ACCEPT;
+                    },
+                });
+
+                const CJK = "\\u3400-\\u4DBF\\u4E00-\\u9FFF\\uF900-\\uFAFF"; // 基本+CJK擴展+A+B與相容表意
+
+                function replaceBetweenCJK(text, ascii, full) {
+                    // 1) CJK ascii CJK
+                    const re1 = new RegExp(`([${CJK}])${ascii}([${CJK}])`, "gu");
+                    text = text.replace(re1, `$1${full}$2`);
+                    // 2) CJK ascii 空白/行尾
+                    const re2 = new RegExp(`([${CJK}])${ascii}(?=\n|\r|\s|$)`, "gu");
+                    text = text.replace(re2, `$1${full}`);
+                    // 3) 行首/空白後 ascii CJK
+                    const re3 = new RegExp(`(?<=^|\n|\r|\s)${ascii}([${CJK}])`, "gu");
+                    text = text.replace(re3, `${full}$1`);
+                    return text;
+                }
+
+                const replacements = [
+                    { ascii: ",", full: "，" },
+                    { ascii: ".", full: "。" },
+                    { ascii: ":", full: "：" },
+                    { ascii: ";", full: "；" },
+                    { ascii: "?", full: "？" },
+                    { ascii: "!", full: "！" },
+                ];
+
+                while (walker.nextNode()) {
+                    const node = walker.currentNode;
+                    let text = node.nodeValue;
+                    // 括號： (CJK  -> （CJK   與  CJK) -> CJK）
+                    const reOpen = new RegExp(`\\((?=[${CJK}])`, "gu");
+                    const reClose = new RegExp(`(?<=[${CJK}])\\)`, "gu");
+                    text = text.replace(reOpen, "（");
+                    text = text.replace(reClose, "）");
+
+                    // 一般標點置換（僅在 CJK 鄰接時）
+                    for (const { ascii, full } of replacements) {
+                        text = replaceBetweenCJK(text, ascii.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), full);
+                    }
+
+                    if (text !== node.nodeValue) {
+                        node.nodeValue = text;
+                    }
+                }
+            }
+
+            // 僅處理條款主體與副標內容
+            const subtitleEl = document.querySelector(".legal-subtitle");
+            const contentEl = document.querySelector(".legal-content");
+            if (subtitleEl) normalizeCjkPunctuationInNode(subtitleEl);
+            if (contentEl) normalizeCjkPunctuationInNode(contentEl);
+
+            // 同意勾選控制與確認按鈕
+            const agreeBox = document.getElementById("agreeTerms");
+            const confirmBtn = document.getElementById("confirmTerms");
+            if (agreeBox && confirmBtn) {
+                agreeBox.addEventListener("change", () => {
+                    confirmBtn.disabled = !agreeBox.checked;
+                });
+                confirmBtn.addEventListener("click", () => {
+                    confirmBtn.setAttribute("aria-busy", "true");
+                    setTimeout(() => {
+                        confirmBtn.removeAttribute("aria-busy");
+                        window.location.href = "/show.html";
+                    }, 300);
+                });
+            }
+        </script>
+    </body>
+</html>
